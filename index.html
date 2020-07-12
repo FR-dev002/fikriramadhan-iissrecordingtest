@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body onload="document.body.focus()">
+
+    <div id="body">
+
+        <button id="start" onclick="toggleFullScreen()">Start Screen Record in Fullscreen Mode</button>
+        <a id="stop" class="open-modal" href="#openModal">Stop Recording and Close fullscreen mode</a>
+
+
+        <div id="openModal" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <div style="text-align: center;">
+                    Yakin akan keluar dari mode fullscreen
+                    <br>
+                    <br>
+                    <br>
+                    <a style="font-size: 16; text-decoration: none;" onCLick="toggleFullScreen()" href="/" class="button-ok">Yes</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+        <video id="video" autoplay></video>
+        <pre id="log"></pre>
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
